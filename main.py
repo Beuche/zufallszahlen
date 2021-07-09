@@ -4,17 +4,15 @@ def zz():
         zahl2=Math.round(Math.random()*20)
     return (zahl1, zahl2)
 
-def tausch(x,y):
-    x=x+y
-    y=x-y
-    x=x-y
-    return(x, y)
+def tauschen(x1,y1):
+    x1=x1+y1
+    y1=x1-y1
+    x1=x1-y1
+    return(x1, y1)
 
 while True:
     (z1, z2)=zz()
-    if (z1>z2):
-         (y1, y2)=tausch(z1,z2)
-    basic.show_number(y1)
-    basic.show_number(y2)
-    
-    
+    if z1>z2:
+        (a1, a2)= tauschen(z1,z2)
+    basic.show_number(a1)
+    basic.show_number(a2)

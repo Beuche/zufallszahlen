@@ -8,19 +8,19 @@ function zz(): number[] {
     return [zahl1, zahl2]
 }
 
-function tausch(x: number, y: number): number[] {
-    x = x + y
-    y = x - y
-    x = x - y
-    return [x, y]
+function tauschen(x1: number, y1: number): number[] {
+    x1 = x1 + y1
+    y1 = x1 - y1
+    x1 = x1 - y1
+    return [x1, y1]
 }
 
 while (true) {
     let [z1, z2] = zz()
     if (z1 > z2) {
-        let [y1, y2] = tausch(z1, z2)
+        let [a1, a2] = tauschen(z1, z2)
     }
     
-    basic.showNumber(y1)
-    basic.showNumber(y2)
+    basic.showNumber(a1)
+    basic.showNumber(a2)
 }
