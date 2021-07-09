@@ -19,10 +19,11 @@ function tauschen(x1: number, y1: number): number[] {
 
 while (true) {
     let [z1, z2] = zz()
-    a1 = z1
-    a2 = z2
     if (z1 > z2) {
-        let [z1, z2] = tauschen(z1, z2)
+        let [a1, a2] = tauschen(z1, z2)
+    } else {
+        a1 = z1
+        a2 = z2
     }
     
     basic.setLedColor(0xff0000)
