@@ -13,13 +13,15 @@ def tauschen(x1,y1):
     return(x1, y1)
 
 while True:
-    (z1, z2)=zz()
-    if z1>z2:
-        (a1, a2) = tauschen(z1,z2)
-    else:
-        a1=z1
-        a2=z2
-    basic.set_led_color(0xff0000)
-    basic.show_number(z1)
-    basic.set_led_color(0x00ff00)
-    basic.show_number(z2)
+    if input.button_is_pressed(Button.A):
+        (z1, z2)=zz()
+        if z1>z2:
+            (a1, a2) = tauschen(z1,z2)
+        else:
+            a1=z1
+            a2=z2
+        basic.set_led_color(0xff0000)
+        basic.show_number(a1)
+        basic.set_led_color(0x00ff00)
+        basic.show_number(a2)
+        basic.set_led_color(0x000000)
